@@ -27,7 +27,7 @@
         Object.values(this.layers).forEach(function( layer ) {
             layer.classname = `parajjax-layer layer-${ index } ${ layer.classname || '' }`.trim();
 
-            let $el = $(`<div class="${ layer.classname }"><img src="${ layer.image }" /></div>`);
+            let $el = $(`<div class="${ layer.classname }"><img alt="${ layer.alttext }" srcset="${ layer.srcset }" src="${ layer.image }" /></div>`);
 
             // Parse the sensitivity argument
             __.layers[ index ].sensitivity = parseFloat(__.layers[ index ].sensitivity);
